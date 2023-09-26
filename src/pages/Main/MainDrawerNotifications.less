@@ -1,0 +1,52 @@
+@import "../../helpers/Variables.less";
+
+@base-cls: page-main-drawer-notifications;
+
+.@{base-cls} {
+  .cmp-drawer-content-wrapper {
+    width: 420px !important;
+  }
+  .cmp-drawer-body {
+    display: grid;
+    grid-gap: 16px;
+  }
+  &_item {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    padding: 14px 16px 14px 32px;
+    position: relative;
+    border-radius: 4px;
+    background: white;
+    border: 1px solid @border-color;
+    box-shadow: @box-shadow-50;
+    &:before {
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: -1px;
+      bottom: -1px;
+      width: 16px;
+      border-radius: 4px;
+      border: 1px solid @border-color;
+    }
+    &.type {
+      &-1 {
+        &:before {
+          background: @color-secondary-90;
+        }
+      }
+      &-2 {
+        &:before {
+          background: @color-success-50;
+        }
+      }
+      &-3 {
+        &:before {
+          background: @color-warning-50;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,40 @@
+@import "../../helpers/Variables.less";
+@import "../../helpers/Mixins.less";
+
+@base-cls: cmp-upload;
+
+.@{base-cls} {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 328px;
+  height: 100px;
+  cursor: pointer;
+
+  &.@{base-cls}-drag {
+    width: 328px;
+    height: 100px;
+    border: 1px dashed @color-primary-50;
+    position: relative;
+
+    .@{base-cls}-drag-container {
+      .icon {
+        font-size: 24px;
+      }
+    }
+
+    &:hover {
+      border: 1.5px dashed @box-shadow-50;
+    }
+  }
+
+  &-span {
+    display: flex;
+    color: @color-text-100;
+  }
+  &-list-item-name{
+    margin-left: 4px;
+    flex: 1 1 auto;
+  }
+
+}

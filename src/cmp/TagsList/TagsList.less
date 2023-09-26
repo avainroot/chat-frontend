@@ -1,0 +1,57 @@
+@import "../../helpers/Variables.less";
+@import "../../helpers/Mixins.less";
+
+@base-cls: cmp-tags-list;
+
+
+.@{base-cls} {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 500px;
+  align-items: center;
+
+  .@{base-cls}-item {
+
+    &:not(.@{base-cls}-disabled) {
+      cursor: pointer;
+    }
+
+    &:not(.@{base-cls}-active) {
+      opacity: 0.5;
+    }
+
+    &.@{base-cls}-active {
+      opacity: 1;
+    }
+  }
+
+  .@{base-cls}-button-create {
+    background-color: @color-secondary-80 !important;
+    border-radius: 50%;
+    padding: 4px !important;
+
+    .icon {
+      color: @color-primary-50 !important;
+      font-size: 14px !important;
+    }
+  }
+}
+
+.@{base-cls}-circle {
+  padding: 4px 12px;
+  .mixin-text(small);
+  border-radius: 4px;
+
+  &-default {
+    background-color: @color-secondary-90;
+  }
+
+  &-warning {
+    background-color: @color-warning-50;
+  }
+
+  &-success {
+    background-color: @color-success-50;
+  }
+}

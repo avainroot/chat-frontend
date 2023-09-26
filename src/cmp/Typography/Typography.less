@@ -1,0 +1,49 @@
+@import "../../helpers/Variables.less";
+@import "../../helpers/Mixins.less";
+
+@base-cls: cmp-typography;
+
+.@{base-cls} {
+  margin: 0;
+  padding: 0;
+  white-space: pre-wrap;
+
+  &.@{base-cls} {
+
+    &-default {
+      color: @color-text-100;
+    }
+    &-secondary {
+      color: @color-text-50;
+    }
+    &-success {
+      color: @color-success-100;
+    }
+    &-warning {
+      color: @color-warning-50;
+    }
+    &-danger {
+      color: @color-error-100;
+    }
+    &-disabled {
+      color: @color-text-20 !important;
+    }
+
+    &-small {
+      .mixin-text(small)
+    }
+    &-middle {
+      .mixin-text(medium)
+    }
+    &-large {
+      .mixin-text(large)
+    }
+
+    &-title {
+      .mixin-typography-text(title);
+    }
+
+  }
+
+
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Авторизация",
+  "subTitle": "Пожалуйста, введите логин и пароль",
+  "button": "Вход",
+  "fieldLogin": "Логин",
+  "fieldLoginRequired": "Пожалуйста, введите логин!",
+  "fieldPassword": "Пароль",
+  "fieldPasswordRequired": "Пожалуйста, введите пароль!"
+}

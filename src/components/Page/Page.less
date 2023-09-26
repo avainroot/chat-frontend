@@ -1,0 +1,35 @@
+@import "../../helpers/Variables.less";
+
+@base-cls: component-page;
+
+.@{base-cls} {
+  padding: 29px 58px;
+
+  .@{base-cls}-title {
+    padding-bottom: 34px;
+      .@{base-cls}-breadcrumb {
+        .@{base-cls}-link {
+          cursor: pointer;
+        }
+        > * {
+          display: inline-block;
+          vertical-align: middle;
+
+          &:last-child * {
+            color: @color-text-20 !important;
+            cursor: default;
+          }
+        }
+
+
+        .icon {
+          color: @color-text-100;
+          font-size: 24px;
+        }
+      }
+  }
+
+  .@{base-cls}-body {
+
+  }
+}

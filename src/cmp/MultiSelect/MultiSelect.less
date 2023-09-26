@@ -1,0 +1,36 @@
+@import "../../helpers/Variables.less";
+@import "../../helpers/Mixins.less";
+
+@base-cls: cmp-multi-select;
+
+.@{base-cls}-input {
+  cursor: pointer;
+
+  .@{base-cls}-input-icon {
+    display: inline-block;
+    line-height: 0;
+    background-color: @color-secondary-80;
+    padding: 4px;
+    border-radius: 50%;
+
+    .icon {
+      color: @color-primary-50;
+      font-size: 18px;
+    }
+  }
+}
+
+.@{base-cls}-body {
+  .cmp-input-search {
+    box-shadow: none !important;
+    margin-bottom: 16px;
+  }
+
+  .cmp-checkbox-group {
+    max-height: 350px;
+    overflow: auto;
+  }
+}
+
+.@{base-cls}-popover {
+}

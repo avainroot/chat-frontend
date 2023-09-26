@@ -1,0 +1,30 @@
+@import "../../helpers/Variables.less";
+@import "../../helpers/Mixins.less";
+
+@base-cls: cmp-date-picker;
+
+.ant-picker{
+
+    &-input{
+        border-bottom: 1px solid @color-secondary-95;
+        
+    
+        input[value]{
+            .mixin-text(medium);
+            font-weight: @font-weight-bodysmall;
+            padding-bottom: 4px;
+        }
+    }
+
+    &-suffix{
+        position: relative;
+        top: -2px;
+        color: @color-text-100;
+    }
+
+    &-clear{
+        position: absolute;
+        top: 10px;
+        color: @color-text-100;
+    }
+}

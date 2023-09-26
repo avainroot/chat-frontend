@@ -1,0 +1,75 @@
+@import "../../helpers/Variables.less";
+@import "../../helpers/Mixins.less";
+
+@base-cls: cmp-view-item;
+
+.@{base-cls} {
+  display: flex;
+  justify-content: center;
+
+  & > * {
+    max-width: 800px;
+    width: 100%;
+
+    .@{base-cls}-tags {
+      margin-bottom: 36px;
+      display: flex;
+
+      & > * {
+        margin-right: 16px;
+      }
+    }
+
+    .@{base-cls}-title {
+      margin-bottom: 24px;
+    }
+
+    .@{base-cls}-content {
+      margin-bottom: 36px;
+    }
+  }
+}
+
+.@{base-cls}-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.@{base-cls}-pencil {
+  cursor: pointer;
+}
+
+.@{base-cls}-link {
+    cursor: pointer;
+    color: @color-primary-50;
+}
+
+
+
+
+.@{base-cls} {
+
+  &.cmp-drawer {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+  }
+    .cmp-drawer-content-wrapper {
+        min-width: 60vw !important;
+        max-width: 60vw !important;
+
+    .cmp-drawer-body {
+        display: flex;
+        flex-direction: column;
+    }
+  }
+
+    &-container {
+        margin-bottom: 16px;
+    }
+}
+
+.@{base-cls}-link {
+    cursor: pointer;
+    color: @color-primary-50;
+}

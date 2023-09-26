@@ -1,0 +1,126 @@
+@import "../../helpers/Variables.less";
+@import "../../helpers/Mixins.less";
+
+@base-cls: cmp-popover;
+
+.@{base-cls} {
+  display: inline-block;
+  z-index: 1000;
+
+  &.@{base-cls}-hidden {
+    display: none;
+  }
+
+  &.@{base-cls}-placement-right,
+  &.@{base-cls}-placement-rightTop,
+  &.@{base-cls}-placement-rightBottom {
+    .@{base-cls}-content {
+      left: 4px;
+    }
+
+    .@{base-cls}-arrow-content {
+      border-radius: 0 0 0 2px;
+      border-width: 0 0 1px 1px !important;
+      left: -5px;
+      top: 50%;
+      margin-top: -5px;
+    }
+  }
+
+  &.@{base-cls}-placement-left,
+  &.@{base-cls}-placement-leftTop,
+  &.@{base-cls}-placement-leftBottom {
+    .@{base-cls}-content {
+      right: 4px;
+    }
+
+    .@{base-cls}-arrow-content {
+      border-radius: 0 2px 0 0;
+      border-width: 1px 1px 0 0 !important;
+      right: -5px;
+      top: 50%;
+      margin-top: -5px;
+    }
+  }
+
+  &.@{base-cls}-placement-top,
+  &.@{base-cls}-placement-topRight,
+  &.@{base-cls}-placement-topLeft {
+    .@{base-cls}-content {
+      bottom: 4px;
+    }
+
+    .@{base-cls}-arrow-content {
+      border-width: 0 1px 1px 0 !important;
+      border-radius: 2px 0;
+      bottom: -5px;
+    }
+  }
+
+  &.@{base-cls}-placement-bottom,
+  &.@{base-cls}-placement-bottomRight,
+  &.@{base-cls}-placement-bottomLeft {
+
+    .@{base-cls}-content {
+      top: 4px;
+    }
+
+    .@{base-cls}-arrow-content {
+      border-width: 1px 0 0 1px !important;
+      border-radius: 2px 0;
+      top: -5px;
+    }
+  }
+
+  &.@{base-cls}-placement-top,
+  &.@{base-cls}-placement-bottom {
+    .@{base-cls}-arrow-content {
+      margin-left: -6px;
+      left: 50%;
+    }
+  }
+  &.@{base-cls}-placement-topLeft,
+  &.@{base-cls}-placement-bottomLeft {
+    .@{base-cls}-arrow-content {
+      left: 16px;
+    }
+  }
+  &.@{base-cls}-placement-topRight,
+  &.@{base-cls}-placement-bottomRight {
+    .@{base-cls}-arrow-content {
+      right: 16px;
+    }
+  }
+
+
+  .@{base-cls}-content {
+    position: relative;
+
+    .@{base-cls}-arrow {
+      overflow: visible;
+
+      .@{base-cls}-arrow-content {
+        background-color: @color-background-50;
+        border: 0 solid @color-secondary-80;
+        transform: rotate(45deg);
+        position: absolute;
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+
+        &:before {
+          content: " ";
+        }
+      }
+    }
+
+    .@{base-cls}-inner {
+      background-color: @color-background-50;
+      border-radius: 4px;
+      padding: 16px;
+      border: 1px solid @color-secondary-80;
+      box-shadow: @box-shadow-50;
+    }
+  }
+
+}

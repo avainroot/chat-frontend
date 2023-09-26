@@ -1,0 +1,107 @@
+@import "../../helpers/Variables.less";
+@import "../../helpers/Mixins.less";
+
+@base-cls: cmp-diff;
+
+.@{base-cls} {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    
+    .cmp-drawer-content-wrapper {
+        min-width: 60vw !important;
+        max-width: 60vw !important;
+
+    .cmp-drawer-body {
+        display: flex;
+        flex-direction: column;
+    }}
+
+    .css-1n5o7vh-diff-container{
+        border: 1px solid @color-secondary-80;
+    }
+
+    .css-1rwygp7-title-block {
+         background-color: @color-secondary-50;
+         border-bottom: 1px solid @color-secondary-80;
+        .css-pa3tg-content-text {
+            .mixin-text(medium); 
+        }
+
+        &:last-child {
+            border-left: 1px solid @color-secondary-80;
+        }
+    }
+
+    .css-orf3ir-gutter {
+        background-color: @color-secondary-70;
+        cursor: auto !important; 
+
+        &.css-rq9a2a-diff-removed{
+            background-color: @color-error-100;
+        }
+        &.css-cnnxkz-diff-added {
+            background-color: @color-success-100;
+        }
+
+        &.css-h84nzi-line-number {
+            .mixin-text(medium);
+            font-weight: 400;
+        }
+
+        pre {
+            color: @color-text-100 !important;
+        }
+    }
+
+    .css-17vezug-marker {
+        background-color: @color-background-50;
+
+        &.css-rq9a2a-diff-removed{
+            background-color: @color-error-50;
+        }
+        &.css-cnnxkz-diff-added {
+            background-color: @color-success-50;
+        }
+
+        pre {
+            .mixin-text(medium);
+            color: @color-text-100 !important;
+            font-weight: 400;
+        }
+    }
+
+     .css-vl0irh-content {
+
+        background-color: @color-background-50;
+
+        &.css-rq9a2a-diff-removed{
+            background-color: @color-error-50;
+        }
+        &.css-cnnxkz-diff-added {
+            background-color: @color-success-50;
+        }
+
+        .css-pa3tg-content-text {
+            .mixin-text(medium);
+            color: @color-text-100;
+            font-weight: 400;
+            line-height: 25px !important;
+        }
+    }
+
+    .css-cncyp1-word-diff {
+        padding: 0 !important;
+
+        &.css-hf3w1f-word-removed{
+            background-color: @color-error-100;
+            text-decoration: line-through;
+        }
+        &.css-1u4zuq6-word-added{
+            background-color: @color-success-100;
+        }
+    }
+    
+  }
+
+    

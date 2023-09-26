@@ -1,0 +1,37 @@
+{
+  "notifications": "Уведомления",
+  "selected": "Выбрать",
+  "exit": "Выход",
+  "placeholderSearch":  "Введите интересующую вас информацию",
+  "create":  "Добавить",
+  "tags": "Тэги",
+  "period": "Период",
+  "allDate": "Все время",
+  "lastDay": "Последний день",
+  "lastWeek": "Последняя неделя",
+  "lastMonth": "Последний месяц",
+  "lastYear": "Последний год",
+  "resetFilter": "Сбросить",
+  "search": "Найти",
+  "searchArticle": "Глобальный поиск",
+  "placeholderChatsSearch":  "Поиск по чатам",
+  "chatStatus": {
+    "processing": "Открытые чаты",
+    "queue": "Чаты в очереди",
+    "closed": "Закрытые чаты"
+  },
+  "chatAction": {
+    "close": "Закрыть чат",
+    "handle": "Обработать"
+  },
+  "title": "Чат с клиентом",
+  "yes": "Да",
+  "no": "Нет",
+  "context": {
+    "quote": "Цитировать"
+  },
+  "popup": {
+    "handle": "Начать обработку?",
+    "close": "Закончить обработку?"
+  }
+}

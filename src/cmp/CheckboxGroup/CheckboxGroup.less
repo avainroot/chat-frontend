@@ -1,0 +1,18 @@
+@import "../../helpers/Variables.less";
+@import "../../helpers/Mixins.less";
+
+.rc-checkbox-group {
+  display: flex;
+
+  &.rc-checkbox-vertical {
+    flex-direction: column;
+  }
+
+  &.rc-checkbox-horizontal {
+    flex-direction: row;
+
+    & > *:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}

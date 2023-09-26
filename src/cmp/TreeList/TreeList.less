@@ -1,0 +1,107 @@
+@import "../../helpers/Variables.less";
+@import "../../helpers/Mixins.less";
+
+@base-cls: cmp-tree-list;
+
+.@{base-cls} {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .@{base-cls}-card {
+    border: 1px solid @color-secondary-70;
+    box-shadow: @box-shadow-50;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+
+    .@{base-cls}-indicator {
+      width: 16px;
+      left: -1px;
+      top: -1px;
+      bottom: -1px;
+      position: absolute;
+      background-color: @color-primary-10;
+      border: 1px solid @color-secondary-70;
+      border-radius: 4px;
+
+      &-info {
+        background-color: @color-primary-10;
+      }
+
+      &-warning {
+        background-color: @color-warning-50;
+      }
+
+      &-success {
+        background-color: @color-success-50;
+      }
+    }
+
+    & > div:last-child {
+      padding: 14px 16px;
+      margin-left: 16px;
+      flex: 1;
+      .@{base-cls}-header {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        .@{base-cls}-config {
+
+        }
+
+        .cmp-typography {
+          flex: 1
+        }
+      }
+
+      .@{base-cls}-body {
+        margin-top: 6px;
+        display: none;
+
+        &.expand {
+          display: block;
+        }
+
+        .@{base-cls}-item {
+          cursor: pointer;
+          padding-bottom: 16px;
+          padding-top: 16px;
+          border-bottom: 1px solid @color-secondary-95;
+          display: flex;
+          align-items: center;
+          margin-right: 50px;
+
+          & > span {
+            .mixin-text(medium);
+            line-height: 24px;
+            flex: 1;
+          }
+
+          &.active {
+            margin-right: 0;
+            color: @color-primary-50;
+            border-bottom-color: @color-primary-50;
+            font-weight: 700;
+
+            & > span {
+              font-weight: 700;
+            }
+
+            .icon {
+              display: inline-block;
+            }
+          }
+
+          .icon {
+            display: none;
+            font-size: 24px;
+          }
+
+        }
+      }
+
+    }
+  }
+}

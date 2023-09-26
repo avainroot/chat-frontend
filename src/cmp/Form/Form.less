@@ -1,0 +1,85 @@
+@import "../../helpers/Variables.less";
+@import "../../helpers/Mixins.less";
+
+.cmp-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+
+  &.cmp-form-horizontal {
+    .cmp-form-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: nowrap;
+
+      .cmp-form-item-label {
+        text-align: left;
+      }
+
+      .cmp-form-item-control {
+        flex: 4;
+      }
+    }
+  }
+
+  &.cmp-form-vertical {
+    .cmp-form-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+
+      .cmp-form-item-control {
+        width: 100%;
+      }
+    }
+  }
+
+  .cmp-form-item {
+
+    &.cmp-form-item-horizontal {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: nowrap;
+    }
+
+    &.cmp-form-item-vertical {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .cmp-form-item-label {
+      label {
+        .mixin-text(medium);
+
+        &:after {
+          content: ":";
+        }
+      }
+    }
+
+    .cmp-form-item-control {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 4px;
+
+      .cmp-form-item-explain {
+        color: @color-text-20;
+        text-align: left;
+
+        .cmp-form-item-explain-error {
+          color: @color-error-100 !important;
+        }
+      }
+
+    }
+  }
+}

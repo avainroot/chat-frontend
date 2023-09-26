@@ -1,0 +1,35 @@
+@import "../../helpers/Variables.less";
+@import "../../helpers/Mixins.less";
+
+.cmp-page-list {
+
+  .cmp-page-list-toolbar {
+    display: flex;
+    column-gap: 14px;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 26px;
+
+    .cmp-page-list-toolbar-action {
+      flex: 1;
+
+      .cmp-page-list-sort-field {
+        float: left;
+      }
+    }
+
+    .cmp-input-search {
+      max-width: 482px;
+      flex: 1;
+    }
+  }
+
+  .cmp-page-list-body {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    grid-gap: 16px;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+}

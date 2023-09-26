@@ -1,0 +1,29 @@
+@import './Variables.less';
+
+.mixin-text(@size) {
+  @font-family: "font-family-body@{size}";
+  @font-size: "size-font-body@{size}";
+  @line-height: "size-lineheight-body@{size}";
+  @font-weight: "font-weight-body@{size}";
+  @letter-spacing: "font-spacing-body@{size}";
+
+  font-family: @@font-family;
+  font-size: @@font-size;
+  line-height: @@line-height;
+  font-weight: @@font-weight;
+  letter-spacing: @@letter-spacing;
+}
+
+.mixin-typography-text(@size) {
+  @font-family: "font-family-@{size}";
+  @font-size: "size-font-@{size}";
+  @line-height: "size-lineheight-@{size}";
+  @font-weight: "font-weight-@{size}";
+  @letter-spacing: "font-spacing-@{size}";
+
+  font-family: @@font-family;
+  font-size: @@font-size;
+  line-height: @@line-height;
+  font-weight: @@font-weight;
+  letter-spacing: @@letter-spacing;
+}

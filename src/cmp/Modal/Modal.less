@@ -1,0 +1,78 @@
+@import "../../helpers/Variables.less";
+@import "../../helpers/Mixins.less";
+
+@base-cls: cmp-modal;
+
+.@{base-cls}-root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+
+  .@{base-cls}-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(50, 50, 50, 0.5);
+  }
+
+  .@{base-cls}-wrap {
+    z-index: 1001;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .@{base-cls} {
+      background: @color-background-50;
+      border-radius: 4px;
+      padding: 35px 58px 18px;
+
+      .@{base-cls}-content {
+        position: relative;
+
+        .@{base-cls}-close {
+          position: absolute;
+          right: 0;
+          top: 0;
+
+          font-size: 24px;
+          line-height: 0;
+          color: @color-primary-50;
+          display: inline-block;
+          cursor: pointer;
+          border: none;
+          background: transparent;
+          padding: 0;
+        }
+
+        .@{base-cls}-header {
+          padding-bottom: 24px;
+
+          .@{base-cls}-title {
+            .mixin-typography-text(title);
+          }
+        }
+
+        .@{base-cls}-footer {
+          padding-top: 24px;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          gap: 16px;
+        }
+      }
+    }
+  }
+
+
+}

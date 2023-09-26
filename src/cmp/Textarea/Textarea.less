@@ -1,0 +1,26 @@
+@import "../../helpers/Variables.less";
+@import "../../helpers/Mixins.less";
+
+@base-cls: cmp-textarea;
+
+.@{base-cls} {
+  width: 100%;
+  padding: 16px;
+  outline: none;
+  border: 1px solid @color-secondary-80;
+  margin: 0;
+  .mixin-text(large);
+  font-weight: 400 !important;
+
+  &:focus {
+    border-color: @color-primary-50;
+  }
+
+  &.@{base-cls}-disabled {
+    background-color: @color-secondary-50;
+  }
+
+  &.@{base-cls}-status-error {
+    border-color: @color-error-100 !important;
+  }
+}

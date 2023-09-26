@@ -1,0 +1,221 @@
+@import "../../helpers/Variables.less";
+@import "../../helpers/Mixins.less";
+
+@base-cls: cmp-button;
+
+.@{base-cls} {
+  .mixin-text(medium);
+  border-radius: 4px;
+  padding: 9px 23px;
+  height: auto;
+  box-shadow: none !important;
+  border-width: 1px;
+  border-style: solid;
+  outline: none;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
+
+  &:not(.@{base-cls}-has-content) {
+    padding: 9px 9px;
+    justify-content: center;
+  }
+
+  .@{base-cls}-text {
+    flex: 1;
+  }
+
+  &.@{base-cls}-block {
+    width: 100%;
+  }
+
+  .@{base-cls}-icon {
+    line-height: 0;
+
+    & > .icon {
+      font-size: @size-lineheight-bodymedium;
+    }
+  }
+
+  .@{base-cls}-loading-icon {
+    line-height: 0;
+    width: auto !important;
+    font-size: @size-lineheight-bodymedium;
+  }
+
+  &:not([disabled]):not(.@{base-cls}-loading) {
+    cursor: pointer;
+  }
+
+  &:not(.@{base-cls}-loading) {
+    .@{base-cls}-loading-icon {
+      display: none;
+    }
+  }
+
+  &.@{base-cls}-loading {
+    opacity: 0.8;
+
+    .@{base-cls}-before-icon {
+      display: none;
+    }
+  }
+
+  &.@{base-cls}-has-text {
+    border-radius: 0;
+    border-color: transparent;
+    padding: 0 !important;
+
+    &[disabled] {
+      &.@{base-cls}-type-secondary {
+        border-color: transparent !important;
+        background-color: transparent !important;
+        color: @color-text-20 !important;
+
+        &:hover,
+        &:focus {
+          background-color: transparent !important;
+          color: @color-text-20 !important;
+          border-color: transparent !important;
+        }
+
+        .@{base-cls}-icon > .icon {
+          color: @color-text-20 !important;
+        }
+      }
+
+    }
+
+    &.@{base-cls}-type-secondary {
+      background-color: transparent;
+      color: @color-text-100;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        color: @color-text-100;
+      }
+
+      .@{base-cls}-icon > .icon {
+        color: @color-text-100;
+      }
+    }
+
+    &.@{base-cls}-type-primary {
+      background-color: transparent;
+      color: @color-primary-50;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        color: @color-primary-50;
+      }
+
+      .@{base-cls}-icon > .icon {
+        color: @color-primary-50;
+      }
+    }
+  }
+
+  &:not(.@{base-cls}-has-text) {
+
+    &.@{base-cls}-type-dropdown {
+      background-color: transparent;
+      color: @color-text-100;
+      border-color: transparent;
+
+      .@{base-cls}-icon > .icon {
+        color: @color-text-100;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        color: @color-text-100;
+        border-color: transparent;
+      }
+    }
+
+    &.@{base-cls}-type-secondary {
+      background-color: @color-background-50;
+      color: @color-text-100;
+      border-color: @color-primary-50;
+
+      .@{base-cls}-icon > .icon {
+        color: @color-text-100;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: @color-background-50;
+        color: @color-text-100;
+        border-color: @color-primary-50;
+      }
+    }
+
+    &.@{base-cls}-type-primary {
+      background-color: @color-primary-50;
+      color: @color-background-50;
+      border: 1px solid @color-primary-50;
+
+      .@{base-cls}-icon > .icon {
+        color: @color-background-50;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: @color-primary-50;
+        border-color: @color-primary-50;
+        color: @color-background-50;
+      }
+    }
+
+    &[disabled] {
+      &.@{base-cls}-type-dropdown,
+      &.@{base-cls}-type-secondary,
+      &.@{base-cls}-type-primary {
+        opacity: 0.7;
+      }
+    }
+
+  }
+
+  &.@{base-cls}-sm {
+    .mixin-text(small);
+
+
+    padding: 7px 15px;
+
+    &:not(.@{base-cls}-has-content) {
+      padding: 7px 7px;
+    }
+
+    .@{base-cls}-loading-icon {
+      font-size: @size-lineheight-bodysmall;
+    }
+
+    .@{base-cls}-icon > .icon {
+      font-size: @size-lineheight-bodysmall;
+    }
+  }
+
+  &.@{base-cls}-lg {
+    .mixin-text(large);
+
+    padding: 11px 31px;
+
+    &:not(.@{base-cls}-has-content) {
+      padding: 11px 11px;
+    }
+
+    .@{base-cls}-loading-icon {
+      font-size: @size-lineheight-bodylarge;
+    }
+
+    .@{base-cls}-icon > .icon {
+      font-size: @size-lineheight-bodylarge;
+    }
+  }
+}

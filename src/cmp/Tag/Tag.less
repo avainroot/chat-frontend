@@ -1,0 +1,36 @@
+@import "../../helpers/Variables.less";
+@import "../../helpers/Mixins.less";
+
+@base-cls: cmp-tag;
+
+.@{base-cls} {
+  .mixin-text(small);
+  padding: 4px 20px;
+  background: @color-secondary-90;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+
+  .@{base-cls}-close-icon {
+    position: absolute;
+    right: 4px;
+  }
+
+  &.@{base-cls}-small {
+    padding: 0 6px;
+    font-size: 10px;
+  }
+
+  &.@{base-cls}-warning {
+    background: @color-warning-50;
+  }
+
+  &.@{base-cls}-success {
+    background: @color-success-50;
+  }
+}
+
+
+

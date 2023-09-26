@@ -1,0 +1,46 @@
+@import "../../helpers/Variables.less";
+
+@base-cls: cmp-breadcrumb;
+
+.@{base-cls} {
+
+  & > * {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      &:last-child {
+        .@{base-cls}-item-separator {
+          display: none;
+        }
+      }
+
+      .icon {
+        color: @color-text-100;
+        font-size: 24px;
+      }
+    }
+
+    .@{base-cls}-item-link {
+      color: @color-text-100;
+
+      &:not([href]) {
+        color: @color-text-20;
+        cursor: default;
+      }
+    }
+
+    .@{base-cls}-item-separator {
+      color: @color-text-20;
+      margin: 0 8px;
+    }
+  }
+}

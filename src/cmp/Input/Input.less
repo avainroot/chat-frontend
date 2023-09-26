@@ -1,0 +1,111 @@
+@import "../../helpers/Variables.less";
+@import "../../helpers/Mixins.less";
+
+@base-cls: cmp-input;
+
+.@{base-cls} {
+  width: 100%;
+  padding: 16px;
+  outline: none;
+  border: 1px solid @color-secondary-80;
+  margin: 0;
+  height: 50px;
+  .mixin-text(large);
+  font-weight: 400 !important;
+
+  &.@{base-cls}-disabled {
+    background-color: @color-secondary-50;
+  }
+
+  &:focus {
+    border-color: @color-primary-50;
+  }
+
+  &::placeholder {
+    color: @color-secondary-100;
+  }
+
+  &.@{base-cls}-status-error {
+    border-color: @color-error-100 !important;
+  }
+}
+
+.@{base-cls}-affix-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid @color-secondary-80;
+
+  &.@{base-cls}-affix-wrapper-status-error {
+    border-color: @color-error-100 !important;
+  }
+
+  &.@{base-cls}-affix-wrapper-focused {
+    border-color: @color-primary-50;
+  }
+
+  &.@{base-cls}-affix-wrapper-disabled {
+    background-color: @color-secondary-50;
+  }
+
+  .@{base-cls} {
+    border: none !important;
+  }
+
+  &.@{base-cls}-search {
+    box-shadow: @box-shadow-50;
+    border-radius: 4px;
+
+    & > * {
+      padding: 8px 16px;
+    }
+
+    & > *:first-child:not(:last-child) {
+      border-radius: 4px 0 0 4px;
+      padding-left: 16px;
+      padding-right: 4px;
+    }
+
+    & > *:not(:first-child):not(:last-child) {
+      border-radius: 0;
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+
+    & > *:not(:first-child):last-child {
+      border-radius: 0 4px 4px 0;
+      padding-right: 16px;
+      padding-left: 4px;
+    }
+  }
+
+  & > *:first-child:not(:last-child) {
+    padding-left: 16px;
+    padding-right: 4px;
+  }
+
+  & > *:not(:first-child):not(:last-child) {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  & > *:not(:first-child):last-child {
+    padding-right: 26px;
+    padding-left: 4px;
+  }
+
+  .@{base-cls}-prefix,
+  .@{base-cls}-suffix {
+    max-height: 50px;
+    padding: 0 8px;
+    outline: none;
+    margin: 0;
+
+    .icon {
+      font-size: 24px;
+      color: @color-text-20;
+      cursor: pointer;
+    }
+  }
+}

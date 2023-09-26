@@ -1,0 +1,33 @@
+@import "../../helpers/Variables.less";
+@import "../../helpers/Mixins.less";
+
+
+.ql-toolbar {
+  position: relative;
+  background-color: @color-background-50 !important;
+  padding-right: 32px !important;
+  border: none !important;
+  border-bottom: 1px solid @color-secondary-80 !important;
+
+
+   .ql-custom {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    
+    .icon {
+        transform: rotate(225deg);
+    }
+  }
+}
+
+
+.ql-editor {
+  min-height: 250px;
+  background-color: @color-background-50;
+}
+
+
+.toolbar-hide {
+  display: none;
+}

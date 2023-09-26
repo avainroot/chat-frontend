@@ -1,0 +1,70 @@
+@import "../../helpers/Variables.less";
+@import "../../helpers/Mixins.less";
+
+@base-cls: cmp-select;
+
+.@{base-cls} {
+  display: flex;
+  gap: 8px;
+  position: relative;
+  padding: 4px 0;
+
+  &:not(.@{base-cls}-borderless) {
+    border-bottom: 1px solid @color-secondary-95;
+  }
+
+  .@{base-cls}-selector {
+    flex: 1;
+
+    .@{base-cls}-selection-search {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      cursor: pointer;
+
+      input {
+        display: none;
+      }
+    }
+
+    .@{base-cls}-selection-item {
+      .mixin-text(small)
+    }
+  }
+
+  .@{base-cls}-arrow {
+    color: @color-text-100;
+    font-size: 24px;
+    line-height: 0;
+  }
+}
+
+.@{base-cls}-dropdown {
+  position: absolute;
+  background: @color-background-50;
+  border: 1px solid @color-secondary-70;
+  box-shadow: @box-shadow-50;
+  border-radius: 4px;
+  padding: 16px;
+  z-index: 100;
+
+  &.@{base-cls}-dropdown-hidden {
+    display: none !important;
+  }
+
+  .@{base-cls}-item-option {
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &.@{base-cls}-item-option-selected {
+      .@{base-cls}-item-option-content {
+        color: @color-primary-50;
+      }
+    }
+  }
+}

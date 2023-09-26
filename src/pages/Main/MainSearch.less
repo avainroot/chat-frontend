@@ -1,0 +1,15 @@
+@import "../../helpers/Variables.less";
+@import "../../helpers/Mixins.less";
+
+@base-cls: page-main-search;
+
+.@{base-cls} {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &:not(.@{base-cls}-mobile) {
+    max-width: 420px;
+  }
+}
